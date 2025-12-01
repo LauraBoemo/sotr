@@ -14,6 +14,10 @@
 #define LED_TASK4 18  // Amarelo
 #define LED_TASK5 19  // Laranja
 
+// Períodos e tempos de trabalho esperados (ms)
+const uint32_t TASK_PERIOD_MS[6] = {0, 1000, 500, 300, 200, 700};
+const uint32_t TASK_BASE_WORK_MS[6] = {0, 50, 30, 20, 10, 25};
+
 // Debug e Logging
 #define DEBUG_SERIAL true
 #define SERIAL_BAUD 115200
@@ -123,11 +127,11 @@ void setup() {
   Serial.println(F("┌──────┬────────────┬──────────┬──────────────┬─────┐"));
   Serial.println(F("│ Task │ Prioridade │ Período  │ Exec. Tempo  │ LED │"));
   Serial.println(F("├──────┼────────────┼──────────┼──────────────┼─────┤"));
-  Serial.println(F("│  T1  │  1 (Baixa) │ 1000ms   │    ~50ms     │ 🔴  │"));
-  Serial.println(F("│  T2  │  2 (Média) │  500ms   │    ~30ms     │ 🟢  │"));
-  Serial.println(F("│  T3  │  3 (Alta)  │  300ms   │    ~20ms     │ 🔵  │"));
-  Serial.println(F("│  T4  │ 4 (Crítica)│  200ms   │    ~10ms     │ 🟡  │"));
-  Serial.println(F("│  T5  │  2 (Média) │  700ms   │  25-35ms(var)│ 🟠  │"));
+  Serial.printf("│  T1  │  1 (Baixa) │ %4lums   │    ~%2lums     │ 🔴  │\n", TASK_PERIOD_MS[1], TASK_BASE_WORK_MS[1]);
+  Serial.printf("│  T2  │  2 (Média) │  %3lums   │    ~%2lums     │ 🟢  │\n", TASK_PERIOD_MS[2], TASK_BASE_WORK_MS[2]);
+  Serial.printf("│  T3  │  3 (Alta)  │  %3lums   │    ~%2lums     │ 🔵  │\n", TASK_PERIOD_MS[3], TASK_BASE_WORK_MS[3]);
+  Serial.printf("│  T4  │ 4 (Crítica)│  %3lums   │    ~%2lums     │ 🟡  │\n", TASK_PERIOD_MS[4], TASK_BASE_WORK_MS[4]);
+  Serial.printf("│  T5  │  2 (Média) │  %3lums   │  %2lu-%2lums(var)│ 🟠  │\n", TASK_PERIOD_MS[5], TASK_BASE_WORK_MS[5], TASK_BASE_WORK_MS[5] + 10);
   Serial.println(F("└──────┴────────────┴──────────┴──────────────┴─────┘\n"));
   
   // Criar tarefas
@@ -180,7 +184,7 @@ void loop() {
  * Período: 1000ms | Execução: ~50ms
  */
 void Task1(void *pvParameters) {
-  const TickType_t xFrequency = pdMS_TO_TICKS(1000);
+  const TickType_t xFrequency = pdMS_TO_TICKS(TASK_PERIOD_MS[1]);
   TickType_t xLastWakeTime = xTaskGetTickCount();
   
   for(;;) {
@@ -195,7 +199,7 @@ void Task1(void *pvParameters) {
     }
     
     // Simular trabalho (~50ms)
-    simulateWork(50);
+    simulateWork(TASK_BASE_WORK_MS[1]);
     
     uint32_t end_us = micros();
     uint32_t exec_time = end_us - start_us;
@@ -206,9 +210,10 @@ void Task1(void *pvParameters) {
     updateStats(1, exec_time);
     
     if (DEBUG_SERIAL) {
-      Serial.printf("[T1] END   | Exec: %.2f ms | Jitter: %+.2f ms\n", 
+      const int32_t expected_us = TASK_BASE_WORK_MS[1] * 1000;
+      Serial.printf("[T1] END   | Exec: %.2f ms | Jitter: %+.2f ms\n",
                     exec_time / 1000.0,
-                    (int32_t)(exec_time - 50000) / 1000.0);
+                    (int32_t)(exec_time - expected_us) / 1000.0);
     }
     
     vTaskDelayUntil(&xLastWakeTime, xFrequency);
@@ -220,7 +225,7 @@ void Task1(void *pvParameters) {
  * Período: 500ms | Execução: ~30ms
  */
 void Task2(void *pvParameters) {
-  const TickType_t xFrequency = pdMS_TO_TICKS(500);
+  const TickType_t xFrequency = pdMS_TO_TICKS(TASK_PERIOD_MS[2]);
   TickType_t xLastWakeTime = xTaskGetTickCount();
   
   for(;;) {
@@ -234,7 +239,7 @@ void Task2(void *pvParameters) {
                     stats[2].executions + 1, start_us);
     }
     
-    simulateWork(30);
+    simulateWork(TASK_BASE_WORK_MS[2]);
     
     uint32_t end_us = micros();
     uint32_t exec_time = end_us - start_us;
@@ -245,9 +250,10 @@ void Task2(void *pvParameters) {
     updateStats(2, exec_time);
     
     if (DEBUG_SERIAL) {
-      Serial.printf("  [T2] END   | Exec: %.2f ms | Jitter: %+.2f ms\n", 
+      const int32_t expected_us = TASK_BASE_WORK_MS[2] * 1000;
+      Serial.printf("  [T2] END   | Exec: %.2f ms | Jitter: %+.2f ms\n",
                     exec_time / 1000.0,
-                    (int32_t)(exec_time - 30000) / 1000.0);
+                    (int32_t)(exec_time - expected_us) / 1000.0);
     }
     
     vTaskDelayUntil(&xLastWakeTime, xFrequency);
@@ -259,7 +265,7 @@ void Task2(void *pvParameters) {
  * Período: 300ms | Execução: ~20ms
  */
 void Task3(void *pvParameters) {
-  const TickType_t xFrequency = pdMS_TO_TICKS(300);
+  const TickType_t xFrequency = pdMS_TO_TICKS(TASK_PERIOD_MS[3]);
   TickType_t xLastWakeTime = xTaskGetTickCount();
   
   for(;;) {
@@ -273,7 +279,7 @@ void Task3(void *pvParameters) {
                     stats[3].executions + 1, start_us);
     }
     
-    simulateWork(20);
+    simulateWork(TASK_BASE_WORK_MS[3]);
     
     uint32_t end_us = micros();
     uint32_t exec_time = end_us - start_us;
@@ -284,9 +290,10 @@ void Task3(void *pvParameters) {
     updateStats(3, exec_time);
     
     if (DEBUG_SERIAL) {
-      Serial.printf("    [T3] END   | Exec: %.2f ms | Jitter: %+.2f ms\n", 
+      const int32_t expected_us = TASK_BASE_WORK_MS[3] * 1000;
+      Serial.printf("    [T3] END   | Exec: %.2f ms | Jitter: %+.2f ms\n",
                     exec_time / 1000.0,
-                    (int32_t)(exec_time - 20000) / 1000.0);
+                    (int32_t)(exec_time - expected_us) / 1000.0);
     }
     
     vTaskDelayUntil(&xLastWakeTime, xFrequency);
@@ -298,7 +305,7 @@ void Task3(void *pvParameters) {
  * Período: 200ms | Execução: ~10ms
  */
 void Task4(void *pvParameters) {
-  const TickType_t xFrequency = pdMS_TO_TICKS(200);
+  const TickType_t xFrequency = pdMS_TO_TICKS(TASK_PERIOD_MS[4]);
   TickType_t xLastWakeTime = xTaskGetTickCount();
   
   for(;;) {
@@ -312,7 +319,7 @@ void Task4(void *pvParameters) {
                     stats[4].executions + 1, start_us);
     }
     
-    simulateWork(10);
+    simulateWork(TASK_BASE_WORK_MS[4]);
     
     uint32_t end_us = micros();
     uint32_t exec_time = end_us - start_us;
@@ -323,9 +330,10 @@ void Task4(void *pvParameters) {
     updateStats(4, exec_time);
     
     if (DEBUG_SERIAL) {
-      Serial.printf("      [T4] END   | Exec: %.2f ms | Jitter: %+.2f ms\n", 
+      const int32_t expected_us = TASK_BASE_WORK_MS[4] * 1000;
+      Serial.printf("      [T4] END   | Exec: %.2f ms | Jitter: %+.2f ms\n",
                     exec_time / 1000.0,
-                    (int32_t)(exec_time - 10000) / 1000.0);
+                    (int32_t)(exec_time - expected_us) / 1000.0);
     }
     
     vTaskDelayUntil(&xLastWakeTime, xFrequency);
@@ -337,14 +345,14 @@ void Task4(void *pvParameters) {
  * Período: 700ms | Execução: 25-35ms (variável)
  */
 void Task5(void *pvParameters) {
-  const TickType_t xFrequency = pdMS_TO_TICKS(700);
+  const TickType_t xFrequency = pdMS_TO_TICKS(TASK_PERIOD_MS[5]);
   TickType_t xLastWakeTime = xTaskGetTickCount();
   
   for(;;) {
     uint32_t start_us = micros();
     
     // Tempo variável para demonstrar jitter
-    uint32_t work_time = 25 + ((stats[5].executions % 10) + 1);
+    uint32_t work_time = TASK_BASE_WORK_MS[5] + ((stats[5].executions % 10) + 1);
     
     logEvent(5, 'S');
     digitalWrite(LED_TASK5, HIGH);
@@ -365,9 +373,10 @@ void Task5(void *pvParameters) {
     updateStats(5, exec_time);
     
     if (DEBUG_SERIAL) {
-      Serial.printf("  [T5] END   | Exec: %.2f ms | Jitter: %+.2f ms 🔀 VARIABLE\n", 
+      const int32_t expected_us = work_time * 1000;
+      Serial.printf("  [T5] END   | Exec: %.2f ms | Jitter: %+.2f ms 🔀 VARIABLE\n",
                     exec_time / 1000.0,
-                    (int32_t)(exec_time - (work_time * 1000)) / 1000.0);
+                    (int32_t)(exec_time - expected_us) / 1000.0);
     }
     
     vTaskDelayUntil(&xLastWakeTime, xFrequency);
