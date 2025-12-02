@@ -1,6 +1,26 @@
 # Relatório Descritivo Curto
 
-Este projeto demonstra um sistema de monitoração e controle em tempo real usando **ESP32 + FreeRTOS** executado no simulador **Wokwi**. A implementação prioriza o escalonamento preemptivo, a coleta de dados de execução e a análise temporal.
+## Dados Gerais
+
+- **Nome**: Laura Righi Boemo
+- **Cadeira**: Sistemas Operacionais & Tempo Real
+- **Semestre**: 2025/2
+
+## Objetivo Deste Trabalho 
+
+- **Objetivos Gerais**: Realizar a [_Possibilidade 3_](https://ead06.proj.ufsm.br/pluginfile.php/5435249/mod_resource/content/4/descri%C3%A7%C3%A3o%20do%20projeto%20semestral.pdf) sugerida para o _Trabalho Semestral_ da cadeira _Sistemas Operacionais & Tempo Real_. Cujos requisitos eram:
+
+1. Projeto monitoração/controle tempo real com
+auxílio computacional;
+2. Hardware e software a escolha do grupo;
+3. Análise temporal de resposta do sistema deve ser
+abordada.
+
+- **Objetivos Específicos**: Este projeto demonstra um sistema de monitoração e controle em tempo real usando **ESP32** executado no simulador **Wokwi**, com:
+
+1. Indução do escalonamento preemptivo;
+2. Realização da coleta de dados de execução;
+3. Analisando seus tempos de resposta com Python.
 
 ## O que foi feito
 - **Configuração de tarefas periódicas** com diferentes prioridades e períodos (1000 ms a 200 ms), simulando cargas de CPU para observar preempções.
@@ -19,9 +39,3 @@ Este projeto demonstra um sistema de monitoração e controle em tempo real usan
 1. Abrir o projeto no Wokwi e iniciar a simulação por **60 segundos completos** até a mensagem "COLETA DE DADOS CONCLUÍDA".
 2. Copiar o bloco CSV do Serial Monitor para `wokwi/events.csv` no repositório.
 3. Rodar `python3 analyze.py wokwi/events.csv` para gerar gráficos e tabelas.
-
-## Evidências de análise temporal
-- **Tempo de resposta e jitter** são calculados por tarefa com base na diferença entre eventos de início/fim e apresentados tanto no monitor serial quanto nas figuras geradas pelo script de análise.
-- **Uso de CPU** é estimado pela soma dos tempos de execução de cada tarefa, permitindo discutir margem temporal e prioridades.
-
-Este fluxo atende aos requisitos de um projeto de Sistemas Operacionais de Tempo Real ao combinar execução preemptiva, coleta de dados temporais e análise quantitativa do comportamento das tarefas.
