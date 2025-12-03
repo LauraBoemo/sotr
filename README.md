@@ -1,5 +1,23 @@
 # Relatório do Sistema: ESP32 c/ FreeRTOS Simulado em Wokwi e Analisado em Python
 
+## Sumário
+- [1. Dados Gerais](#1-dados-gerais)
+- [2. Objetivo Deste Trabalho](#2-objetivo-deste-trabalho)
+  - [2.1. Objetivos Gerais](#21-objetivos-gerais)
+  - [2.2. Objetivo Específico](#22-objetivo-específico)
+- [3. Detalhes Do Sistema](#3-detalhes-do-sistema)
+  - [3.1. FreeRTOS & ESP32](#31-freertos--esp32)
+  - [3.2. Python & Análise](#32-python--análise)
+- [4. Funcionamento Geral](#4-funcionamento-geral)
+- [5. Avaliação dos Resultados](#5-avaliação-dos-resultados)
+  - [5.1. Linha do tempo de eventos (timeline)](#51-linha-do-tempo-de-eventos-timeline)
+  - [5.2. Diagrama de Gantt](#52-diagrama-de-gantt)
+  - [5.3. Uso de CPU](#53-uso-de-cpu)
+  - [5.4. Tempos de resposta](#54-tempos-de-resposta)
+  - [5.5. Comparação de jitter](#55-comparação-de-jitter)
+- [6. Dados brutos do console (console-geral.tsx)](#6-dados-brutos-do-console-console-geraltsx)
+- [7. Bônus: Como executar](#7-bônus-como-executar)
+
 ## 1. Dados Gerais
 
 - **Nome**: Laura Righi Boemo
@@ -98,7 +116,15 @@ O **jitter** mede a variação do tempo de resposta entre execuções sucessivas
 | --- | --- |
 | ![Jitter comparado com 200 eventos](dados-200/jitter_comparison.png) | ![Jitter comparado com 1500 eventos](dados-1500/jitter_comparison.png) |
 
-## 6. Bônus: Como executar
+## 6. Dados brutos do console (console-geral.tsx)
+
+O log completo da execução no simulador foi copiado para `console-geral.tsx`. Cada linha segue o padrão `[Tx] START/END | #N | timestamp μs | Exec: XX.XX ms | Jitter: ±YY.YY ms`, permitindo acompanhar a sequência de ativações/preempções e os cálculos de jitter por tarefa.
+
+- **Organização**: o cabeçalho confirma a criação das tarefas e habilita o logging; na sequência, cada `START` marca a ativação de uma tarefa com seu número de execução (`#N`) e timestamp em microsegundos, enquanto cada `END` fecha o ciclo com o tempo de execução e jitter relativo à execução anterior da mesma tarefa.
+- **Casos especiais**: jitter negativo (ex.: `Jitter: -0.06 ms` em uma das execuções da T2) ocorre quando a duração entre duas conclusões consecutivas fica ligeiramente **menor** que a mediana anterior — algo possível por variações de agendamento ou por a tarefa ter sido preemptada em um ponto mais favorável no ciclo seguinte. Já jitter muito alto com a marcação 🔀 **VARIABLE** em T5 indica que a carga de trabalho aleatória daquela execução esticou o tempo total.
+- **Uso prático**: o log serve tanto para validar visualmente a ordem de preempções no console do Wokwi quanto para cruzar com o `events.csv` exportado pelo firmware, garantindo que os gráficos de tempo de resposta e jitter reflitam os eventos reais.
+
+## 7. Bônus: Como executar
 1. Abrir o [projeto no Wokwi](https://wokwi.com/projects/449086123858100225) e iniciar a simulação por **60 segundos completos** até a mensagem "COLETA DE DADOS CONCLUÍDA".
 2. Copiar o bloco CSV do Serial Monitor para `wokwi/events.csv` no repositório.
 3. Criar um ambiente virtual Python e ativá-lo:
