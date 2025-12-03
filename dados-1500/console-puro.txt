@@ -1,0 +1,580 @@
+✓ Task 1 criada
+[T1] START | #1 | 2170777 μs
+✓ Task 2 criada
+  [T2] START | #1 | 2181311 μs
+✓ Task 3 criada
+    [T3] START | #1 | 2181588 μs
+      [T4] START | #1 | 2181781 μs ⚡ CRITICAL
+✓ Task 4 criada
+✓ Task 5 criada
+✓ Monitor criado
+
+╔══════════════════════════════════════════════════════════╗
+║              SISTEMA INICIADO COM SUCESSO                ║ 
+║         Monitorando execução das tarefas...              ║
+╚══════════════════════════════════════════════════════════╝
+
+📊 Logging de eventos HABILITADO (CSV será gerado)
+
+Legenda: [T1][T2][T3][T4][T5] | Timestamps em μs
+
+      [T4] END   | Exec: 20.23 ms | Jitter: +10.23 ms
+    [T3] END   | Exec: 41.42 ms | Jitter: +21.42 ms
+  [T5] START | #1 | 2223942 μs | Work: 26 ms
+  [T2] END   | Exec: 42.65 ms | Jitter: +12.65 ms
+  [T5] END   | Exec: 67.07 ms | Jitter: +41.07 ms 🔀 VARIABLE
+[T1] END   | Exec: 60.24 ms | Jitter: +10.24 ms
+      [T4] START | #2 | 2380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #2 | 2480879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #3 | 2580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T2] START | #2 | 2680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+      [T4] START | #4 | 2780880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #3 | 2791774 μs
+    [T3] END   | Exec: 20.25 ms | Jitter: +0.25 ms
+  [T5] START | #2 | 2923879 μs | Work: 27 ms
+  [T5] END   | Exec: 27.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #5 | 2980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #4 | 3080879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+[T1] START | #2 | 3169879 μs
+      [T4] START | #6 | 3180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.14 ms
+  [T2] START | #3 | 3192078 μs
+  [T2] END   | Exec: 29.94 ms | Jitter: -0.06 ms
+[T1] END   | Exec: 52.91 ms | Jitter: +2.91 ms
+      [T4] START | #7 | 3380880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #5 | 3391774 μs
+    [T3] END   | Exec: 20.25 ms | Jitter: +0.25 ms
+      [T4] START | #8 | 3580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T5] START | #3 | 3623879 μs | Work: 28 ms
+  [T5] END   | Exec: 28.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+    [T3] START | #6 | 3680880 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+  [T2] START | #4 | 3701792 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+      [T4] START | #9 | 3780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+      [T4] START | #10 | 3980880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #7 | 3991774 μs
+    [T3] END   | Exec: 20.25 ms | Jitter: +0.25 ms
+[T1] START | #3 | 4169879 μs
+      [T4] START | #11 | 4180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T2] START | #5 | 4191781 μs
+  [T2] END   | Exec: 30.24 ms | Jitter: +0.24 ms
+[T1] END   | Exec: 52.92 ms | Jitter: +2.92 ms
+    [T3] START | #8 | 4280879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+  [T5] START | #4 | 4323879 μs | Work: 29 ms
+  [T5] END   | Exec: 29.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #12 | 4380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+      [T4] START | #13 | 4580880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+    [T3] START | #9 | 4591797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+  [T2] START | #6 | 4680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+      [T4] START | #14 | 4780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #10 | 4880879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #15 | 4980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T5] START | #5 | 5023879 μs | Work: 30 ms
+  [T5] END   | Exec: 30.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+[T1] START | #4 | 5169879 μs
+      [T4] START | #16 | 5180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #11 | 5191782 μs
+    [T3] END   | Exec: 20.24 ms | Jitter: +0.24 ms
+  [T2] START | #7 | 5212779 μs
+  [T2] END   | Exec: 30.24 ms | Jitter: +0.24 ms
+[T1] END   | Exec: 73.92 ms | Jitter: +23.92 ms
+      [T4] START | #17 | 5380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #12 | 5480879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #18 | 5580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T2] START | #8 | 5680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+  [T5] START | #6 | 5723879 μs | Work: 31 ms
+  [T5] END   | Exec: 31.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #19 | 5780880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+    [T3] START | #13 | 5791797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+      [T4] START | #20 | 5980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #14 | 6080879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+[T1] START | #5 | 6169879 μs
+      [T4] START | #21 | 6180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T2] START | #9 | 6191781 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+[T1] END   | Exec: 53.36 ms | Jitter: +3.36 ms
+      [T4] START | #22 | 6380880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+    [T3] START | #15 | 6391797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+  [T5] START | #7 | 6423879 μs | Work: 32 ms
+  [T5] END   | Exec: 32.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #23 | 6580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #16 | 6680880 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+  [T2] START | #10 | 6701792 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+      [T4] START | #24 | 6780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+      [T4] START | #25 | 6980880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+    [T3] START | #17 | 6991797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+  [T5] START | #8 | 7123879 μs | Work: 33 ms
+  [T5] END   | Exec: 33.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+[T1] START | #6 | 7169879 μs
+      [T4] START | #26 | 7180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T2] START | #11 | 7191781 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+[T1] END   | Exec: 52.91 ms | Jitter: +2.91 ms
+    [T3] START | #18 | 7280879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #27 | 7380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+      [T4] START | #28 | 7580880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+    [T3] START | #19 | 7591797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+  [T2] START | #12 | 7680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+      [T4] START | #29 | 7780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T5] START | #9 | 7823879 μs | Work: 34 ms
+  [T5] END   | Exec: 34.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+    [T3] START | #20 | 7880879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #30 | 7980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+[T1] START | #7 | 8169879 μs
+      [T4] START | #31 | 8180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #21 | 8191782 μs
+    [T3] END   | Exec: 20.24 ms | Jitter: +0.24 ms
+  [T2] START | #13 | 8212779 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+[T1] END   | Exec: 73.92 ms | Jitter: +23.92 ms
+      [T4] START | #32 | 8380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #22 | 8480879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+  [T5] START | #10 | 8523879 μs | Work: 35 ms
+  [T5] END   | Exec: 35.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #33 | 8580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T2] START | #14 | 8680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+      [T4] START | #34 | 8780880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #23 | 8791774 μs
+    [T3] END   | Exec: 20.25 ms | Jitter: +0.25 ms
+      [T4] START | #35 | 8980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #24 | 9080879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+[T1] START | #8 | 9169879 μs
+      [T4] START | #36 | 9180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T2] START | #15 | 9191781 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+[T1] END   | Exec: 52.91 ms | Jitter: +2.91 ms
+  [T5] START | #11 | 9223879 μs | Work: 26 ms
+  [T5] END   | Exec: 26.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #37 | 9380880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #25 | 9391774 μs
+    [T3] END   | Exec: 20.25 ms | Jitter: +0.25 ms
+      [T4] START | #38 | 9580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #26 | 9680880 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+  [T2] START | #16 | 9701792 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+      [T4] START | #39 | 9780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T5] START | #12 | 9923879 μs | Work: 27 ms
+  [T5] END   | Exec: 27.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #40 | 9980880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #27 | 9991774 μs
+    [T3] END   | Exec: 20.25 ms | Jitter: +0.25 ms
+[T1] START | #9 | 10169879 μs
+      [T4] START | #41 | 10180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+  [T2] START | #17 | 10191790 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+[T1] END   | Exec: 53.20 ms | Jitter: +3.20 ms
+    [T3] START | #28 | 10280879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #42 | 10380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+      [T4] START | #43 | 10580880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #29 | 10591797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+  [T5] START | #13 | 10623879 μs | Work: 28 ms
+  [T5] END   | Exec: 28.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+  [T2] START | #18 | 10680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+      [T4] START | #44 | 10780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #30 | 10880879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #45 | 10980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+[T1] START | #10 | 11169879 μs
+      [T4] START | #46 | 11180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #31 | 11191780 μs
+    [T3] END   | Exec: 20.23 ms | Jitter: +0.23 ms
+  [T2] START | #19 | 11213238 μs
+  [T2] END   | Exec: 29.77 ms | Jitter: -0.23 ms
+[T1] END   | Exec: 73.91 ms | Jitter: +23.91 ms
+  [T5] START | #14 | 11323879 μs | Work: 29 ms
+  [T5] END   | Exec: 29.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #47 | 11380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #32 | 11480879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #48 | 11580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T2] START | #20 | 11680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+      [T4] START | #49 | 11780880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #33 | 11791797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+      [T4] START | #50 | 11980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T5] START | #15 | 12023879 μs | Work: 30 ms
+  [T5] END   | Exec: 30.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+    [T3] START | #34 | 12080879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+[T1] START | #11 | 12169879 μs
+      [T4] START | #51 | 12180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+  [T2] START | #21 | 12191790 μs
+  [T2] END   | Exec: 30.22 ms | Jitter: +0.22 ms
+[T1] END   | Exec: 52.92 ms | Jitter: +2.92 ms
+      [T4] START | #52 | 12380880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #35 | 12391797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+      [T4] START | #53 | 12580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #36 | 12680880 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+  [T2] START | #22 | 12701792 μs
+  [T5] START | #16 | 12723879 μs | Work: 31 ms
+  [T2] END   | Exec: 31.10 ms | Jitter: +1.10 ms
+  [T5] END   | Exec: 31.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #54 | 12780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+      [T4] START | #55 | 12980880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #37 | 12991797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+[T1] START | #12 | 13169879 μs
+      [T4] START | #56 | 13180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+  [T2] START | #23 | 13191790 μs
+  [T2] END   | Exec: 30.22 ms | Jitter: +0.22 ms
+[T1] END   | Exec: 52.92 ms | Jitter: +2.92 ms
+
+╔══════════════════════════════════════════════════════════════╗
+║                  ESTATÍSTICAS DO SISTEMA                     ║
+╚══════════════════════════════════════════════════════════════╝    [T3] START | #38 | 13280879 μs
+
+Uptime: 13.3 segundos | Free Heap: 275332 bytes
+
+┌──────┬───────────┬──────────┬──────────┬──────────┬─────────┐
+│ Task │ Execuções │ Média(ms)│ Min (ms) │ Max (ms) │Jitter(ms)│
+├──────┼───────────┼──────────┼──────────┼──────────┼──────────┤
+│  T1  │      12   │   58.84  │   52.91  │   73.92  │   21.01  │
+│  T2  │      23   │   30.75  │   29.77  │   42.65  │   12.88  │
+│  T3  │      38   │   20.95  │   20.14  │   41.42  │   21.28  │
+│  T4  │      56   │   10.32  │   10.13  │   20.24  │   10.10  │
+│  T5  │      16   │   32.45  │   26.14  │   67.07  │   40.93  │
+└──────┴───────────┴──────────┴──────────┴──────────┴──────────┘
+    
+    [T3] END   | Exec: 28.14 ms | Jitter: +8.13 ms
+      [T4] START | #57 | 13380880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+  [T5] START | #17 | 13423879 μs | Work: 32 ms
+  [T5] END   | Exec: 32.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #58 | 13580880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #39 | 13591797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+  [T2] START | #24 | 13680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+      [T4] START | #59 | 13780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #40 | 13880879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #60 | 13980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T5] START | #18 | 14123879 μs | Work: 33 ms
+  [T5] END   | Exec: 33.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+[T1] START | #13 | 14169879 μs
+      [T4] START | #61 | 14180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #41 | 14191779 μs
+    [T3] END   | Exec: 20.24 ms | Jitter: +0.24 ms
+  [T2] START | #25 | 14212786 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+[T1] END   | Exec: 73.89 ms | Jitter: +23.89 ms
+      [T4] START | #62 | 14380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #42 | 14480879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #63 | 14580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T2] START | #26 | 14680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+      [T4] START | #64 | 14780880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #43 | 14791797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+  [T5] START | #19 | 14823879 μs | Work: 34 ms
+  [T5] END   | Exec: 34.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #65 | 14980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #44 | 15080879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+[T1] START | #14 | 15169879 μs
+      [T4] START | #66 | 15180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+  [T2] START | #27 | 15191790 μs
+  [T2] END   | Exec: 30.22 ms | Jitter: +0.22 ms
+[T1] END   | Exec: 52.92 ms | Jitter: +2.92 ms
+      [T4] START | #67 | 15380880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #45 | 15391797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+  [T5] START | #20 | 15523879 μs | Work: 35 ms
+  [T5] END   | Exec: 35.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #68 | 15580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #46 | 15680880 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+  [T2] START | #28 | 15701792 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+      [T4] START | #69 | 15780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+      [T4] START | #70 | 15980880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #47 | 15991797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+[T1] START | #15 | 16169879 μs
+      [T4] START | #71 | 16180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+  [T2] START | #29 | 16191790 μs
+  [T2] END   | Exec: 30.22 ms | Jitter: +0.22 ms
+[T1] END   | Exec: 52.92 ms | Jitter: +2.92 ms
+  [T5] START | #21 | 16223879 μs | Work: 26 ms
+  [T5] END   | Exec: 26.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+    [T3] START | #48 | 16280879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #72 | 16380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+      [T4] START | #73 | 16580880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #49 | 16591797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+  [T2] START | #30 | 16680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+      [T4] START | #74 | 16780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #50 | 16880879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+  [T5] START | #22 | 16923879 μs | Work: 27 ms
+  [T5] END   | Exec: 27.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #75 | 16980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+[T1] START | #16 | 17169879 μs
+      [T4] START | #76 | 17180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #51 | 17191779 μs
+    [T3] END   | Exec: 20.24 ms | Jitter: +0.24 ms
+  [T2] START | #31 | 17212764 μs
+  [T2] END   | Exec: 30.26 ms | Jitter: +0.26 ms
+[T1] END   | Exec: 73.90 ms | Jitter: +23.90 ms
+      [T4] START | #77 | 17380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #52 | 17480879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #78 | 17580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T5] START | #23 | 17623879 μs | Work: 28 ms
+  [T5] END   | Exec: 28.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+  [T2] START | #32 | 17680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+      [T4] START | #79 | 17780880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #53 | 17791797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+      [T4] START | #80 | 17980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #54 | 18080879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+[T1] START | #17 | 18169879 μs
+      [T4] START | #81 | 18180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+  [T2] START | #33 | 18191790 μs
+  [T2] END   | Exec: 30.22 ms | Jitter: +0.22 ms
+[T1] END   | Exec: 52.92 ms | Jitter: +2.92 ms
+  [T5] START | #24 | 18323879 μs | Work: 29 ms
+  [T5] END   | Exec: 29.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #82 | 18380880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #55 | 18391797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+      [T4] START | #83 | 18580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #56 | 18680880 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+  [T2] START | #34 | 18701792 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+      [T4] START | #84 | 18780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+      [T4] START | #85 | 18980880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #57 | 18991797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+  [T5] START | #25 | 19023879 μs | Work: 30 ms
+  [T5] END   | Exec: 30.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+[T1] START | #18 | 19169879 μs
+      [T4] START | #86 | 19180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+  [T2] START | #35 | 19191790 μs
+  [T2] END   | Exec: 30.22 ms | Jitter: +0.22 ms
+[T1] END   | Exec: 52.91 ms | Jitter: +2.91 ms
+    [T3] START | #58 | 19280879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #87 | 19380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+      [T4] START | #88 | 19580880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #59 | 19591797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+  [T2] START | #36 | 19680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+  [T5] START | #26 | 19723879 μs | Work: 31 ms
+  [T5] END   | Exec: 31.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #89 | 19780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #60 | 19880879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #90 | 19980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+[T1] START | #19 | 20169879 μs
+      [T4] START | #91 | 20180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #61 | 20191782 μs
+    [T3] END   | Exec: 20.23 ms | Jitter: +0.23 ms
+  [T2] START | #37 | 20212791 μs
+  [T2] END   | Exec: 30.22 ms | Jitter: +0.22 ms
+[T1] END   | Exec: 73.92 ms | Jitter: +23.92 ms
+      [T4] START | #92 | 20380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T5] START | #27 | 20423879 μs | Work: 32 ms
+  [T5] END   | Exec: 32.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+    [T3] START | #62 | 20480879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #93 | 20580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T2] START | #38 | 20680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+      [T4] START | #94 | 20780880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #63 | 20791797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+      [T4] START | #95 | 20980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #64 | 21080879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+  [T5] START | #28 | 21123879 μs | Work: 33 ms
+  [T5] END   | Exec: 33.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+[T1] START | #20 | 21169879 μs
+      [T4] START | #96 | 21180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+  [T2] START | #39 | 21191790 μs
+  [T2] END   | Exec: 30.22 ms | Jitter: +0.22 ms
+[T1] END   | Exec: 52.91 ms | Jitter: +2.91 ms
+      [T4] START | #97 | 21380880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #65 | 21391797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+      [T4] START | #98 | 21580879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #66 | 21680880 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+  [T2] START | #40 | 21701792 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+      [T4] START | #99 | 21780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T5] START | #29 | 21823879 μs | Work: 34 ms
+  [T5] END   | Exec: 34.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #100 | 21980880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+    [T3] START | #67 | 21991797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+[T1] START | #21 | 22169879 μs
+      [T4] START | #101 | 22180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+  [T2] START | #41 | 22191790 μs
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+[T1] END   | Exec: 52.91 ms | Jitter: +2.91 ms
+    [T3] START | #68 | 22280879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #102 | 22380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+  [T5] START | #30 | 22523879 μs | Work: 35 ms
+  [T5] END   | Exec: 35.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+      [T4] START | #103 | 22580880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.13 ms | Jitter: +0.13 ms
+    [T3] START | #69 | 22591797 μs
+    [T3] END   | Exec: 20.22 ms | Jitter: +0.22 ms
+  [T2] START | #42 | 22680879 μs
+  [T2] END   | Exec: 30.14 ms | Jitter: +0.14 ms
+      [T4] START | #104 | 22780879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #70 | 22880879 μs
+    [T3] END   | Exec: 20.14 ms | Jitter: +0.14 ms
+      [T4] START | #105 | 22980879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+[T1] START | #22 | 23169879 μs
+      [T4] START | #106 | 23180880 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms
+    [T3] START | #71 | 23191782 μs
+    [T3] END   | Exec: 20.24 ms | Jitter: +0.24 ms
+  [T2] START | #43 | 23212779 μs
+  [T5] START | #31 | 23223879 μs | Work: 26 ms
+  [T2] END   | Exec: 30.23 ms | Jitter: +0.23 ms
+  [T5] END   | Exec: 26.14 ms | Jitter: +0.14 ms 🔀 VARIABLE
+[T1] END   | Exec: 80.93 ms | Jitter: +30.93 ms
+      [T4] START | #107 | 23380879 μs ⚡ CRITICAL
+      [T4] END   | Exec: 10.14 ms | Jitter: +0.14 ms

@@ -6,7 +6,7 @@
 - **Disciplina**: Sistemas Operacionais & Tempo Real
 - **Semestre**: 2025/2
 
-## 2. Objetivo Deste Trabalho 
+## 2. Objetivo Deste Trabalho
 
 ### 2.1. Objetivos Gerais
 
@@ -41,7 +41,35 @@ Uma vez que os dados gerados pelo simulador estejam recolhidos em `events.csv`, 
 
 ## 5. Avaliação dos Resultados
 
+Os dados de execução capturados do simulador estão em `dados/console.txt`, que registra a carga de eventos processados, quantidade de execuções completas por tarefa e métricas agregadas de tempo de resposta e uso de CPU. 
+
+Além disso, partir dessas métricas coletadas em `events.csv`, foram gerados gráficos para ilustrar o comportamento temporal do sistema:
+
+- **Linha do tempo de eventos**: `dados/timeline.png` evidencia a sequência de inícios e términos das tarefas ao longo dos microsegundos, permitindo verificar preempções e intervalos de inatividade.
+
+  ![Linha do tempo de eventos](dados/timeline.png)
+
+- **Diagrama de Gantt**: `dados/gantt_chart.png` mostra a ocupação do processador por tarefa, destacando como as prioridades impactam a execução.
+
+  ![Diagrama de Gantt](dados/gantt_chart.png)
+
+- **Uso de CPU**: `dados/cpu_usage.png` apresenta a utilização percentual ao longo do tempo, confirmando a estabilidade do sistema sob a carga proposta.
+
+  ![Uso de CPU](dados/cpu_usage.png)
+
+- **Tempos de resposta**: `dados/response_times.png` traz histogramas/boxplots das durações por tarefa, alinhando-se às médias, mínimos e máximos reportados no log.
+
+  ![Tempos de resposta](dados/response_times.png)
+
+- **Comparação de jitter**: `dados/jitter_comparison.png` compara a variação temporal entre tarefas, evidenciando a maior incerteza das tarefas de prioridade intermediária.
+
+  ![Comparação de jitter](dados/jitter_comparison.png)
+
 ## 6. Bônus: Como executar
 1. Abrir o [projeto no Wokwi](https://wokwi.com/projects/449086123858100225) e iniciar a simulação por **60 segundos completos** até a mensagem "COLETA DE DADOS CONCLUÍDA".
 2. Copiar o bloco CSV do Serial Monitor para `wokwi/events.csv` no repositório.
-3. Rodar `python3 analyze.py wokwi/events.csv` para gerar gráficos e tabelas.
+3. Criar um ambiente virtual Python e ativá-lo:
+   - Linux/macOS: `python3 -m venv .venv && source .venv/bin/activate`
+   - Windows (PowerShell): `py -m venv .venv; .venv\\Scripts\\Activate.ps1`
+4. Instalar as dependências de análise dentro do ambiente: `python3 -m pip install -r python/requirements.txt`.
+5. Rodar `python3 analyze.py wokwi/events.csv` para gerar gráficos e tabelas.
