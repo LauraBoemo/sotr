@@ -1,5 +1,7 @@
 # Relatório do Sistema: ESP32 c/ FreeRTOS Simulado em Wokwi e Analisado em Python
 
+Para uma melhor leitura deste trabalho, acesse o [repositório Github](https://github.com/LauraBoemo/sotr)
+
 ## Sumário
 - [1. Dados Gerais](#1-dados-gerais)
 - [2. Objetivo Deste Trabalho](#2-objetivo-deste-trabalho)
