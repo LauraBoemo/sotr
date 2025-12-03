@@ -28,7 +28,7 @@
 
 ### 2.1. Objetivos Gerais
 
-Desenvolver a [_Possibilidade 3_](https://ead06.proj.ufsm.br/pluginfile.php/5435249/mod_resource/content/4/descri%C3%A7%C3%A3o%20do%20projeto%20semestral.pdf), cujos requisitos eram:
+Desenvolver a [_Possibilidade 3_](https://ead06.proj.ufsm.br/pluginfile.php/5435249/mod_resource/content/4/descri%C3%A7%C3%A3o%20do%20projeto%20semestral.pdf) apresentada para este trabalho, cujos requisitos eram:
 
 1. Projeto monitoração/controle tempo real;
 2. Hardware e software a escolha do grupo;
@@ -36,7 +36,7 @@ Desenvolver a [_Possibilidade 3_](https://ead06.proj.ufsm.br/pluginfile.php/5435
 
 ### 2.2. Objetivo Específico
 
-Desenvolver um sistema de monitoração e controle em tempo real usando **ESP32** com **FreeRTOS** nativo enquanto executado no simulador **Wokwi** com indução de escalonamento preemptivo e coleta de dados de execução cuja análise temporal de resposta do sistema é feita via **Python**.
+Desenvolver um sistema de monitoração e controle em tempo real usando um **ESP32** executado no simulador **Wokwi**. A partir do seu **FreeRTOS** nativo, são executadas induções de escalonamento preemptivo entre 5 tarefas diferentes. São coletados dados de duas execuções de tal sistema: uma mais curta, com 200 logs, e outra mais longa, com 1500 logs. A análise temporal de resposta e a comparação entre os sistemas é feita via **Python**. Também há uma análise geral do console da execução longa.
 
 ## 3. Detalhes Do Sistema
 
